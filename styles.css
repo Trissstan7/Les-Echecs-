@@ -4,17 +4,38 @@
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(180deg, #fff 0%, #c2dbfa 100%);
+  position: relative;
 }
+
+/* Ajout de l'image translucide d'une pièce d'échec (le Roi) */
+.index-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('https://www.example.com/roi_echec.png'); /* Remplace par l'URL de l'image du roi */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Section des règles avec fond clair */
 .regles-bg {
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(180deg, #fff 0%, #c9f6cb 100%);
 }
+
 header {
   padding: 40px 0 10px 0;
   text-align: center;
 }
+
 .slogan {
   color: #222;
   font-size: 2.1em;
@@ -22,12 +43,14 @@ header {
   font-weight: bold;
   margin-bottom: 0;
 }
+
 .reine-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 44px 0 24px 0;
 }
+
 .reine-img {
   max-width: 220px;
   height: auto;
@@ -35,10 +58,12 @@ header {
   background: rgba(255,255,255,0.6);
   border-radius: 60px;
 }
+
 nav {
   text-align: center;
   margin-top: 32px;
 }
+
 .main-btn {
   color: #fff;
   background: #377dff;
@@ -52,6 +77,7 @@ nav {
   display: inline-block;
   transition: background 0.3s;
 }
+
 .main-btn:hover { background: #225bbf; }
 
 .page-title {
@@ -72,14 +98,17 @@ nav {
   color: #111;
   font-size: 1.17em;
 }
+
 .regles-section h2 {
   color: #3b7749;
   margin-top: 32px;
 }
+
 .regles-section ul {
   margin-left: 22px;
   margin-bottom: 18px;
 }
+
 .regles-end {
   font-size: 1.07em;
   color: #1d3048;
@@ -93,10 +122,12 @@ nav {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(180deg, #fff 0%, #e3f0ff 100%);
 }
+
 .piece-header {
   text-align: center;
   padding: 30px 0 20px 0;
 }
+
 .piece-title {
   color: #377dff;
   font-size: 2em;
@@ -104,6 +135,7 @@ nav {
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
+
 .piece-desc {
   max-width: 720px;
   margin: 0 auto 18px auto;
@@ -114,6 +146,7 @@ nav {
   color: #213;
   box-shadow: 0 3px 12px rgba(80,110,160,.07);
 }
+
 .piece-image-main {
   display: block;
   margin: 0 auto 18px auto;
@@ -122,6 +155,7 @@ nav {
   border-radius: 60px;
   box-shadow: 0 1px 9px rgba(60,100,160,.12);
 }
+
 .piece-move-image {
   display: block;
   margin: 14px auto 32px auto;
@@ -130,6 +164,7 @@ nav {
   border-radius: 24px;
   box-shadow: 0 1px 9px rgba(70,160,160,.11);
 }
+
 .piece-btn {
   display: block;
   margin: 0 auto 44px auto;
@@ -145,4 +180,51 @@ nav {
   text-align: center;
   transition: background 0.3s;
 }
+
 .piece-btn:hover { background: #225bbf; }
+
+/* Ajout de la section expliquant l'utilité des pièces */
+.pieces-description {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(80, 80, 80, 0.15);
+}
+
+.pieces-description h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #3b7749;
+  text-align: center;
+}
+
+.pieces-description ul {
+  font-size: 1.15em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.pieces-description li {
+  margin-bottom: 20px;
+}
+
+.pieces-description li::before {
+  content: "• ";
+  color: #377dff;
+  font-weight: bold;
+}
+
+.pieces-description p {
+  font-size: 1.1em;
+  color: #1d3048;
+  margin-top: 20px;
+  text-align: center;
+  .pieces-description .piece-image {
+  width: 50px; /* Taille des images des pièces */
+  height: 50px;
+  margin-right: 15px; /* Espace entre l'image et le texte */
+  vertical-align: middle; /* Aligner l'image au centre avec le texte */
+  border-radius: 10px; /* Pour arrondir les bords des images */
+}
