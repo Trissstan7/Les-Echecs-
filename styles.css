@@ -3,98 +3,66 @@
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #fff 0%, #c2dbfa 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #377dff 100%); /* Dégradé du blanc au bleu roi */
   position: relative;
 }
 
-/* Ajout de l'image translucide d'une pièce d'échec (le Roi) */
+/* Ajout de l'image translucide d'une pièce d'échec (ex: Reine ou Roi) */
 .index-bg::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url('https://www.example.com/roi_echec.png'); /* Remplace par l'URL de l'image du roi */
+  background-image: url('https://www.example.com/reine_blanc.png'); /* Remplacer par l'URL de l'image de la pièce */
   background-size: contain;
   background-repeat: no-repeat;
   width: 300px;
   height: 300px;
-  opacity: 0.3;
+  opacity: 0.2; /* Faible opacité pour ne pas gêner la lecture */
   z-index: -1;
 }
 
-/* Section des règles avec fond clair */
-.regles-bg {
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #fff 0%, #c9f6cb 100%);
-}
-
-header {
-  padding: 40px 0 10px 0;
-  text-align: center;
-}
-
-.slogan {
-  color: #222;
-  font-size: 2.1em;
-  letter-spacing: 1px;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-.reine-img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 44px 0 24px 0;
-}
-
-.reine-img {
-  max-width: 220px;
-  height: auto;
-  box-shadow: 0 6px 32px rgba(80,110,160,.13);
-  background: rgba(255,255,255,0.6);
-  border-radius: 60px;
-}
-
-nav {
-  text-align: center;
-  margin-top: 32px;
-}
-
-.main-btn {
+/* Bouton principal de navigation vers les règles */
+.regles-btn {
+  display: block;
+  width: 250px;
+  margin: 30px auto; /* Centré */
+  background-color: #377dff; /* Bleu roi */
   color: #fff;
-  background: #377dff;
-  padding: 16px 46px;
+  padding: 16px 30px;
   border-radius: 32px;
-  font-size: 1.17em;
-  text-decoration: none;
+  text-align: center;
+  font-size: 1.2em;
   font-weight: bold;
-  letter-spacing: 2px;
-  box-shadow: 0 5px 22px rgba(55,125,255,0.11);
-  display: inline-block;
-  transition: background 0.3s;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 5px 22px rgba(55,125,255,0.2);
+  transition: background-color 0.3s ease-in-out;
 }
 
-.main-btn:hover { background: #225bbf; }
+.regles-btn:hover {
+  background-color: #225bbf; /* Couleur au survol */
+}
 
+/* Titre principal des règles */
 .page-title {
   color: #222;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
-  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 30px;
   letter-spacing: 1.2px;
 }
 
+/* Section des règles */
 .regles-section {
-  background: rgba(255,255,255,0.95);
-  border-radius: 22px;
   max-width: 900px;
-  margin: 30px auto;
-  padding: 44px 32px;
-  box-shadow: 0 4px 32px rgba(80, 160, 120, 0.11);
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   color: #111;
   font-size: 1.17em;
 }
@@ -104,30 +72,35 @@ nav {
   margin-top: 32px;
 }
 
+/* Liste dans les règles */
 .regles-section ul {
   margin-left: 22px;
   margin-bottom: 18px;
 }
 
+/* Dernière section des règles */
 .regles-end {
-  font-size: 1.07em;
+  font-size: 1.1em;
   color: #1d3048;
+  text-align: center;
   margin-top: 30px;
 }
 
-/* Format pièces - pages de détail */
+/* Section des pièces - page de détail */
 .piece-bg {
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #fff 0%, #e3f0ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #e3f0ff 100%);
 }
 
+/* Header pour les pages de détail des pièces */
 .piece-header {
   text-align: center;
   padding: 30px 0 20px 0;
 }
 
+/* Titre des pages de détail des pièces */
 .piece-title {
   color: #377dff;
   font-size: 2em;
@@ -136,6 +109,7 @@ nav {
   letter-spacing: 1px;
 }
 
+/* Description d'une pièce */
 .piece-desc {
   max-width: 720px;
   margin: 0 auto 18px auto;
@@ -147,6 +121,7 @@ nav {
   box-shadow: 0 3px 12px rgba(80,110,160,.07);
 }
 
+/* Image principale de la pièce */
 .piece-image-main {
   display: block;
   margin: 0 auto 18px auto;
@@ -156,6 +131,7 @@ nav {
   box-shadow: 0 1px 9px rgba(60,100,160,.12);
 }
 
+/* Image de déplacement de la pièce */
 .piece-move-image {
   display: block;
   margin: 14px auto 32px auto;
@@ -165,6 +141,7 @@ nav {
   box-shadow: 0 1px 9px rgba(70,160,160,.11);
 }
 
+/* Bouton pour chaque pièce - navigation vers d'autres pièces */
 .piece-btn {
   display: block;
   margin: 0 auto 44px auto;
@@ -181,9 +158,11 @@ nav {
   transition: background 0.3s;
 }
 
-.piece-btn:hover { background: #225bbf; }
+.piece-btn:hover {
+  background: #225bbf; /* Couleur au survol */
+}
 
-/* Ajout de la section expliquant l'utilité des pièces */
+/* Description des pièces dans la page des règles */
 .pieces-description {
   max-width: 900px;
   margin: 60px auto;
@@ -223,11 +202,11 @@ nav {
   text-align: center;
 }
 
-/* Stylisation des images des pièces dans la description */
+/* Image des pièces dans la description */
 .pieces-description .piece-image {
   width: 50px; /* Taille des images des pièces */
   height: 50px;
-  margin-right: 15px; /* Espace entre l'image et le texte */
-  vertical-align: middle; /* Aligner l'image au centre avec le texte */
-  border-radius: 10px; /* Pour arrondir les bords des images */
+  margin-right: 15px; /* Espacement entre l'image et le texte */
+  vertical-align: middle; /* Aligner l'image au centre du texte */
+  border-radius: 10px; /* Bords arrondis des images */
 }
