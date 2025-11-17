@@ -221,7 +221,10 @@ nav {
   color: #1d3048;
   margin-top: 20px;
   text-align: center;
-  .pieces-description .piece-image {
+}
+
+/* Stylisation des images des pièces dans la description */
+.pieces-description .piece-image {
   width: 50px; /* Taille des images des pièces */
   height: 50px;
   margin-right: 15px; /* Espace entre l'image et le texte */
